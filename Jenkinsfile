@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                javac Calc.java CalcTest.java
+                javac src/Calc.java src/CalcTest.java
             }
         }
 		stage('test') {
             steps {
-                java CalcTest.java
+                java src/CalcTest.java
             }
         }
     }
