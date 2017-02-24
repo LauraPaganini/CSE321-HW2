@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                javac Calc.java CalcTest.java
+            }
+        }
+		stage('test') {
+            steps {
+                java CalcTest.java
             }
         }
     }
