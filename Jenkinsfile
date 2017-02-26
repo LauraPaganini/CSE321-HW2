@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('test') {
             steps {
-                java src/CalcTest
+                java CalcTest
             }
         }
     }
