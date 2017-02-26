@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                javac src/Calc.java 
-				javac src/CalcTest.java
+                javac Calc.java 
+				javac CalcTest.java
             }
         }
 		stage('test') {
