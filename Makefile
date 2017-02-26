@@ -1,9 +1,9 @@
-all: Calc.class CalcTest.class
-Calc.class: Calc.java
+all: src\Calc.class src\CalcTest.class
+src\Calc.class: src\Calc.java
 	javac src\Calc.java
-CalcTest.class: CalcTest.java Calc.class
+src\CalcTest.class: src\CalcTest.java src\Calc.class
 	javac src\CalcTest.java
-test: CalcTest.class
-    java junit.textui.TestRunner CalcTest
+test: src\CalcTest.class
+    java junit.textui.TestRunner src\CalcTest
 clean:
-	rm -f *.class
+	rm -f src\*.class
