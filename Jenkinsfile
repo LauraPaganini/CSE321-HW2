@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'javac -classpath junit-4.12.jar src/Calc.java src/CalcTest.java'
+                javac -classpath junit-4.12.jar src/Calc.java src/CalcTest.java
             }
         }
 		stage('test') {
             steps {
-                sh 'java -classpath junit-4.12.jar:src:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalcTest'
+                java -classpath junit-4.12.jar;src;hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalcTest
             }
         }
     }
