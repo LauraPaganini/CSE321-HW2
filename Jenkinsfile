@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'javac src/Calc.java src/CalcTest.java'
+                sh 'javac junit-4.12.jar src/Calc.java src/CalcTest.java'
             }
         }
 		stage('test') {
