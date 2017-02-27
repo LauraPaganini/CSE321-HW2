@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'javac junit-4.12.jar src/Calc.java src/CalcTest.java'
+                sh 'javac -classpath junit-4.12.jar src/Calc.java src/CalcTest.java'
             }
         }
 		stage('test') {
             steps {
-                sh 'java src/CalcTest'
+                sh 'java -classpath junit-4.12.jar org.junit.runner.JUnitCore CalcTest'
             }
         }
     }
